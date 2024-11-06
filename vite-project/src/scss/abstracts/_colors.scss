@@ -1,0 +1,36 @@
+/*
+  8 color schema ariables
+
+  DO NOT CHANGE OR USE OUTSIDE OF THIS FILE.
+*/
+$byO-color-blue: #215375;
+$byO-color-green: #4A9199;
+$byO-color-teal: #7CCBA3;
+$byO-color-yellow: #FADE9C;
+$byO-color-orange: #E7726E;
+$byO-color-red: #DD4C77;
+$byO-color-purple: #7E326F;
+
+/*
+  Black and white
+*/
+$byO-color-black: #293241;
+$byO-color-white: hsla(0, 0%, 100%, 0.933);
+$byO-color-white-glass :  hsla(0, 0%, 100%, 0.333);
+
+
+/*
+  containers
+*/
+$byO-bg: $byO-color-white;
+$byO-square-1: $byO-color-blue;
+$byO-square-2: $byO-color-green;
+$byO-square-3: $byO-color-teal;
+$byO-square-4: $byO-color-yellow;
+$byO-square-5: $byO-color-orange;
+$byO-square-6: $byO-color-red;
+$byO-square-7: $byO-color-purple;
+
+
+
+

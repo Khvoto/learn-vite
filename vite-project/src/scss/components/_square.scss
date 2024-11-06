@@ -1,0 +1,91 @@
+@use '../abstracts' as *;
+
+.square-1 {
+  background-color:  $byO-square-1;
+}
+
+.square-1.content {
+  left: 0;
+  width: 80px;
+
+  &.active {
+    left: calc(-1 * calc((50vw - 302px) / 2));
+    width: 80vw;
+  }
+}
+
+.square-2 {
+  background-color: $byO-square-2;
+}
+
+.square-2.content {
+  left: 87px;
+
+  &.active {
+    left: calc(-1 * calc((50vw - 302px) / 2));
+  }
+}
+
+.square-3 {
+  background-color: $byO-square-3;
+}
+
+.square-3.content {
+  left: 174px;
+
+    &.active {
+    left: calc(-1 * calc((50vw - 302px) / 2));
+  }
+}
+
+
+.square-4 {
+  background-color: $byO-square-4;
+}
+
+.square-4.content {
+  left: calc( 87px * 3 );
+
+    &.active {
+    left: calc(-1 * calc((50vw - 302px) / 2));
+  }
+}
+
+
+.square-5 {
+  background-color: $byO-square-5;
+}
+
+.square-5.content {
+    left: calc( 87px * 4 );
+
+      &.active {
+    left: calc(-1 * calc((50vw - 302px) / 2));
+  }
+}
+
+
+.square-6 {
+  background-color: $byO-square-6;
+}
+
+.square-6.content {
+    left: calc( 87px * 5 );
+
+      &.active {
+    left: calc(-1 * calc((50vw - 302px) / 2));
+  }
+}
+
+
+.square-7 {
+  background-color: $byO-square-7;
+}
+
+.square-7.content {
+    left: calc( 87px * 6 );
+
+      &.active {
+    left: calc(-1 * calc((50vw - 302px) / 2));
+  }
+}
