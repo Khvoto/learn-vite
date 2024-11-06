@@ -1,3 +1,35 @@
-.arrows {
+.arrow {
+  background-color: grey;
+  border-radius: 50%;
+  cursor: pointer;
   font-size: 2rem;
+  height: 45px;
+  overflow: hidden;
+  position: absolute;
+  width: 45px;
+
+  span {
+    position: relative;
+  }
+
+  &.left {
+    transform: rotate(45deg);
+    left: -50px;
+
+    span {
+      left: 15px;
+      top: -5px;
+    }
+  }
+
+  &.right {
+    transform: rotate(-45deg);
+    right: -50px;
+
+        span {
+      right: -15px;
+      top: -5px;
+    }
+  }
 }
+
