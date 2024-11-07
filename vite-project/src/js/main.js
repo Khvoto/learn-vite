@@ -1,6 +1,7 @@
 import '../scss/main.scss';
 import { start } from './modules/start';
 import { hoverAndClick } from './modules/hoverAndClick';
+import { checkActiveState } from './modules/checkActiveState';
 
 const app = document.querySelector('#app');
 let menu = '';
@@ -22,5 +23,16 @@ ${content}</div>
 
 `;
 
+
+/**
+ * Modules to be run once
+ */
 start();
 hoverAndClick();
+
+/** 
+ * Intervall
+ */
+setInterval ( () => {
+  checkActiveState();
+}, 100 );

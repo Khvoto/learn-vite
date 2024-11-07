@@ -10,18 +10,22 @@ export function hoverAndClick() {
   const content = document.getElementsByClassName('content');
   const overlay = document.getElementsByClassName('overlay');
 
-  closeContent(content, overlay);
+
+  
+  closeWithOverlay(content, overlay);
   addArrows(content);
-  openSquare(squares, content, overlay);
+  openSquare(squares, content);
 }
 
-function openSquare(squares, content, overlay) {
+function openSquare(squares, content) {
 
   for (let i = 0; i < squares.length; i++) {
     const contentContainer = Array.from(squares[i].classList);
 
     squares[i].addEventListener('mouseover', () => {
-      squares[i].classList.add('focus');
+      if (!contentContainer.includes('content')) {
+        squares[i].classList.add('focus');
+      }
       if (i > 0 && !contentContainer.includes('content')) {
         squares[i - 1].classList.add('focus-sibling');
       }
@@ -39,31 +43,22 @@ function openSquare(squares, content, overlay) {
         squares[i + 1].classList.remove('focus-sibling');
       }
     });
+    
+    if(i < content.length) {
+      squares[i].addEventListener('click', () => {
+        content[i].classList.toggle('hidden');
+        content[i].classList.toggle('active');
+      });
 
-    squares[i].addEventListener('click', () => {
-      const menu = Array.from(squares[i].classList);
-      content[i].classList.toggle('hidden');
-      content[i].classList.toggle('active');
-
-      // Make sure not to add overlay while targeting content squares.
-      if (!menu.includes('content')) {
-        overlay[0].classList.add('hidden');
-      }
-    });
-
-    content[i].addEventListener('click', () => {
-      const overlayList = Array.from(overlay[0].classList);
-      console.log('Overlay: ', overlayList);
-      content[i].classList.toggle('hidden');
-      content[i].classList.toggle('active');
-      if(!overlayList.includes('hidden'))
-        console.log('hidden')
-        overlay[0].classList.add('hidden');
-    });
+      content[i].addEventListener('click', () => {
+        content[i].classList.toggle('hidden');
+        content[i].classList.toggle('active');
+      });
+    }
   }
 }
 
-function closeContent(content, overlay) {
+function closeWithOverlay(content, overlay) {
   overlay[0].addEventListener('click', () => {
     for (let i = 0; i < content.length; i++) {
       const list = Array.from(content[i].classList);
@@ -88,9 +83,8 @@ function addArrows(content) {
   `;
 
   for (let i = 0; i < content.length; i++) {
-    content[i].innerHTML += leftArrow + rightArrow;
+      content[i].innerHTML += leftArrow + rightArrow;
   }
   arrowClick();
 
 }
-
