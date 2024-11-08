@@ -2,6 +2,7 @@
 
 .square-1 {
   background-color:  $byO-square-1;
+  //border: solid 5px $byO-square-1;
 }
 
 .square-1.content {
@@ -9,7 +10,8 @@
   width: 80px;
 
   &.active {
-    left: calc(-1 * calc((50vw - 302px) / 2));
+    border-radius: 8px;
+    left: calc(-1 * calc((40vw - 302px)));
     width: 80vw;
   }
 }
@@ -22,7 +24,7 @@
   left: 87px;
 
   &.active {
-    left: calc(-1 * calc((50vw - 302px) / 2));
+    left: calc(-1 * calc((40vw - 302px)));
   }
 }
 
@@ -34,7 +36,7 @@
   left: 174px;
 
     &.active {
-    left: calc(-1 * calc((50vw - 302px) / 2));
+    left: calc(-1 * calc((40vw - 302px)));
   }
 }
 
@@ -47,7 +49,7 @@
   left: calc( 87px * 3 );
 
     &.active {
-    left: calc(-1 * calc((50vw - 302px) / 2));
+    left: calc(-1 * calc((40vw - 302px)));
   }
 }
 
@@ -60,7 +62,7 @@
     left: calc( 87px * 4 );
 
       &.active {
-    left: calc(-1 * calc((50vw - 302px) / 2));
+    left: calc(-1 * calc((40vw - 302px)));
   }
 }
 
@@ -73,7 +75,7 @@
     left: calc( 87px * 5 );
 
       &.active {
-    left: calc(-1 * calc((50vw - 302px) / 2));
+    left: calc(-1 * calc((40vw - 302px)));
   }
 }
 
@@ -86,6 +88,6 @@
     left: calc( 87px * 6 );
 
       &.active {
-    left: calc(-1 * calc((50vw - 302px) / 2));
+    left: calc(-1 * calc((40vw - 302px)));
   }
 }

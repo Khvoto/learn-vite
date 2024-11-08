@@ -1,3 +1,12 @@
+@use 'colors' as *;
+
 @mixin button {
   border: solid 2px black;
+}
+
+@mixin text-gradient {
+  background: -webkit-linear-gradient(45deg, $byO-color-blue, $byO-color-green, $byO-color-teal, $byO-color-yellow, $byO-color-orange, $byO-color-red, $byO-color-purple);
+  text-shadow: 1px 1px 1px 1px black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

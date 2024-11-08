@@ -1,0 +1,9 @@
+@use '../abstracts/' as *;
+
+#main-title {
+  @include text-gradient;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translatex(-50%);
+}

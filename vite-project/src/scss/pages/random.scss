@@ -1,0 +1,28 @@
+@use '../abstracts/' as *;
+
+#random {
+  #random-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+    .title {
+      color: $byO-color-white;
+    }
+  
+  #random-images{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: calc(100% - 20px);
+    justify-content: space-evenly;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: auto;
+    width: 100%;
+    scrollbar-color: $byO-color-white-glass $byO-color-green;
+    scrollbar-width: thin;
+  }
+  }
+}

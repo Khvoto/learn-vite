@@ -1,4 +1,12 @@
-h1,
+@use './colors' as *;
+
+h1 {
+  font-family: 'Spectral', serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+
 h2,
 h3,
 h4,
@@ -6,6 +14,11 @@ h5,
 h6,
 p,
 a {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 300;
+}
+
+.title {
+  text-align: center;
+  text-shadow: 1px 1px 1px $byO-color-black;
 }

@@ -9,8 +9,6 @@ export function hoverAndClick() {
   const squares = document.getElementsByClassName('square');
   const content = document.getElementsByClassName('content');
   const overlay = document.getElementsByClassName('overlay');
-
-
   
   closeWithOverlay(content, overlay);
   addArrows(content);
@@ -46,11 +44,6 @@ function openSquare(squares, content) {
     
     if(i < content.length) {
       squares[i].addEventListener('click', () => {
-        content[i].classList.toggle('hidden');
-        content[i].classList.toggle('active');
-      });
-
-      content[i].addEventListener('click', () => {
         content[i].classList.toggle('hidden');
         content[i].classList.toggle('active');
       });
