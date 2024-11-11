@@ -1,5 +1,6 @@
 export function imageCardCreator(target) {
   getRandomThumbnails(target, 30)
+  //getRandomImages(target)
 }
 
 /**
@@ -18,15 +19,23 @@ export function imageCardCreator(target) {
   ]
  */
 async function getRandomImages(target) {
-  await fetch('https://picsum.photos/v2/list')
-    .then((response) => response.json())
+  try {
+    const response = await fetch('https://picsum.photos/v2/list')
+      if( !response.ok){
+        throw new Error(' Fan också')
+      }
+    ((response) => response.json())
     .then((data) => {
-      for(let i=0; i < data.length; i++) {
-        createCard(id, data[i].download_url, target)
+      for(let id=0; id < data.length; id++) {
+        let test = data[id].download_url.split('/');
+        test[5] = 300;
+        test[6]= 200; 
+        createCard(id, data[id].download_url, target)
       }
     });
-    //.catch((error) => console.error(error));
-}
+    } catch(error) {console.error(`Attans, ${error}`) }
+  }
+  
 
 
 function getRandomThumbnails (target, amount) {
